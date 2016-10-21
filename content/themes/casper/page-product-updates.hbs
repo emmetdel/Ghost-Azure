@@ -1,0 +1,46 @@
+{{!< default}}
+
+{{#get "posts" include="tags" filter="tags:product-updates"}}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4>List Of Recent Updates</h4>
+                </div>
+                <ul class="list-group">
+                    {{#foreach posts}}
+                    <li class="list-group-item sidebar-item"><a href="#{{title}}">{{title}}</a></li>
+                    {{/foreach}}
+                </ul>
+                <div class="panel-footer">
+                    <a href="{{@blog.url}}"><button type="button" class="btn btn-large btn-block btn-success"><i class="fa fa-arrow-left" aria-hidden="true"></i> Return to Main</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3>Product Updates</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        {{#foreach posts }}
+                        <li class="list-group-item" id="{{title}}">
+                            <div style="border-bottom: 1px solid grey;">
+                                <h3 style="width:80%; display:inline-block">{{title}}</h3>
+                                <p style="display:inline-block; color:#337ab7;">
+                                    <time class="post-date" datetime="{{date format=" YYYY-MM-DD "}}">{{date format="DD MMMM YYYY"}}</time>
+                                </p>
+                            </div>
+                            <div>{{content}}</div>
+                        </li>
+                        {{/foreach}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/get}}
+

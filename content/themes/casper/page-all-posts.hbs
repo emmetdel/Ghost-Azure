@@ -8,15 +8,17 @@
 		<div class="panel panel-default">
 
 			<header class="post-header panel-heading">
-				<h1 class="post-title">{{title}}</h1>
-				<section class="post-meta">
-					<time class="post-date" datetime="{{date format=" YYYY-MM-DD "}}">{{date format="DD MMMM YYYY"}}</time>
-				</section>
+				<h1 class="post-title">All Posts</h1>
 			</header>
 
-
 			<section class="panel-body">
-				{{content}}
+				{{#get "posts" limit="all" include="tags"}}
+                <ul class="list-group">
+                    {{#foreach posts}}
+                    <li class="list-group-item"><a href="{{url}}">{{title}} </a>  <div class="tag-links">Categories:  <a href="{{url}}">{{tags}}</a></div></li>
+                    {{/foreach}}
+                </ul>
+				{{/get}}
 			</section>
 
 			<div class="panel-footer">

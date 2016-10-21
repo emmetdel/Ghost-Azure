@@ -1,14 +1,12 @@
 {{!< default}}
 
+{{#get "posts" include="tags" filter="tags:faq"}}
 <div class="container">
-    <main id="content" class="content" role="main">
-        <!-- Page Sidebar -->
+    <div class="row">
         <div class="col-lg-4">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    {{#tag}}
-                    <h4>{{name}}</h4>
-                    {{/tag}}
+                    <h4>Frequently Asked Questions</h4>
                 </div>
                 <ul class="list-group">
                     {{#foreach posts}}
@@ -16,29 +14,30 @@
                     {{/foreach}}
                 </ul>
                 <div class="panel-footer">
-                    
                     <a href="{{@blog.url}}"><button type="button" class="btn btn-large btn-block btn-success"><i class="fa fa-arrow-left" aria-hidden="true"></i> Return to Main</button></a>
-
                 </div>
             </div>
         </div>
-
-        <!-- Main Page Content -->
         <div class="col-lg-8">
-            {{#foreach posts }}
             <div class="panel panel-primary">
-                
-                <div class="panel-heading" id="{{title}}"><h3>{{title}}</h3></div>
-                <div class="panel-body">{{content}}</div>
-                <div class="panel-footer"><b>Last Updated:</b>
-                    <i><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time></i>
+                <div class="panel-heading">
+                    <h3>FAQ</h3>
                 </div>
-                
+                <div class="panel-body">
+                    <ul class="list-group">
+                        {{#foreach posts }}
+                        <li class="list-group-item" id="{{title}}">
+                            <div style="border-bottom: 1px solid grey;">
+                                <i><h3 style="color: grey;">Question: {{title}}</h3></i>
+                            </div>
+                            <div><p>{{content}}</p></div>
+                        </li>
+                        {{/foreach}}
+                    </ul>
+                </div>
             </div>
-            {{/foreach}}
         </div>
-                    
-
-    </main>
+    </div>
 </div>
+{{/get}}
 
