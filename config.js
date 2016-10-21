@@ -67,13 +67,13 @@ config = {
         mail: {
          transport: 'SMTP',
          options: {
-             service: process.env.emailService,
-             auth: {
-                 user: process.env.emailUsername, // mailgun username
-                 pass: process.env.emailPassword  // mailgun password
-             }
-         },
-         from: process.env.emailFromAddress // 'from' address when sending emails
+                 service: 'Sendgrid',
+                 auth: {
+                     user: 'azure_b0f1c57e5be1b5b381e3291940c44d89', // mailgun username
+                     pass: 'trackplansoftware01'  // mailgun password
+                 }
+             },
+             from: 'support@trackplanfm.com' // 'from' address when sending emails
         },
         database: {
             client: 'sqlite3',
@@ -84,7 +84,7 @@ config = {
         },
         server: {
             // Host to be passed to node's `net.Server#listen()`
-            host: '127.0.0.1',
+            host: 'http://trackplandocs.azurewebsites.net',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: process.env.PORT
         },
