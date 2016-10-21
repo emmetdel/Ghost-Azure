@@ -69,7 +69,7 @@ config = {
          options: {
                  service: 'Sendgrid',
                  auth: {
-                     user: 'azure_b0f1c57e5be1b5b381e3291940c44d89', // mailgun username
+                     user: 'azure_b0f1c57e5be1b5b381e3291940c44d89@azure.com', // mailgun username
                      pass: 'trackplansoftware01'  // mailgun password
                  }
              },
@@ -84,7 +84,7 @@ config = {
         },
         server: {
             // Host to be passed to node's `net.Server#listen()`
-            host: 'http://trackplandocs.azurewebsites.net',
+            host: 'smtp.sendgrid.net',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: process.env.PORT
         },
