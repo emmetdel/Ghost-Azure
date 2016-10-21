@@ -28,13 +28,13 @@ config = {
          mail: {
              transport: 'SMTP',
              options: {
-                 service: process.env.emailService,
+                 service: 'Sendgrid',
                  auth: {
-                     user: process.env.emailUsername, // mailgun username
-                     pass: process.env.emailPassword  // mailgun password
+                     user: 'azure_b0f1c57e5be1b5b381e3291940c44d89', // mailgun username
+                     pass: 'trackplansoftware01'  // mailgun password
                  }
              },
-             from: process.env.emailFromAddress // 'from' address when sending emails
+             from: 'support@trackplanfm.com' // 'from' address when sending emails
          },
 
         database: {
