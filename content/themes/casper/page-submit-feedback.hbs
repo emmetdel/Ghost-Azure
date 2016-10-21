@@ -6,53 +6,19 @@
 				<h3>Contact Us & Send us your feedback</h3>
 			</div>
 			<div class="panel-body">
-		<form id="contact-us-form" data-toggle="validator" role="form" action="https://formspree.io/emmetdel@gmail.com"
-      method="POST">
-			<div class="form-group">
-				<div class="input-group input-group-lg name">
-					<span class="input-group-addon" id="sizing-addon2"><span class="fa fa-keyboard-o"></span></span>
-					<input name="name" type="text" id="contact-name" class="form-control" placeholder="Name" data-error="Please enter your name." aria-describedby="sizing-addon2"
-						required>
-				</div>
-				<div class="help-block with-errors"></div>
+				<script type="text/javascript" src="https://odamae.io/form/js/light.js"></script>
+				<form id="odamae-contact-form" method="post" style="display: none">
+					<div class="odamae-row">
+						<input type="text" class="odamae-input" name="name" id="name" value="" placeholder="Name" />
+						<input type="text" class="odamae-input" name="contact" id="contact" value="" placeholder="Email" />
+						<textarea class="odamae-textarea" name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+					</div>
+					<div class="odamae-row visual-captcha"></div>
+					<div class="odamae-row actions">
+						<input type="submit" class="odamae-button odamae-submit" value="Send Message" onclick="odamaeSubmit(this)" data-apikey="odamae.io_58f6fc22f9b5eec87882b21a34873baf_02d4"/>
+					</div>
+				</form>
 			</div>
-			<div class="form-group">
-				<div class="input-group input-group-lg email">
-					<span class="input-group-addon" id="sizing-addon2"><span class="fa fa-envelope-o"></span></span>
-					<input type="email" id="contact-email" class="form-control" placeholder="Email" data-error="Email address is invalid." aria-describedby="sizing-addon2"
-						required>
-				</div>
-				<div class="help-block with-errors"></div>
-			</div>
-			<div class="form-group">
-				<div class="input-group input-group-lg website">
-					<span class="input-group-addon" id="sizing-addon2"><span class="fa fa-globe"></span></span>
-					<input type="url" id="contact-website" class="form-control" placeholder="Website" data-error="Please enter a valid URL (must start http://*)."
-						aria-describedby="sizing-addon2">
-				</div>
-				<div class="help-block with-errors"></div>
-			</div>
-			<div class="form-group">
-				<div class="input-group-lg title">
-					<input type="text" id="contact-subject" class="form-control" placeholder="Subject" data-error="Please enter a subject." aria-describedby="sizing-addon2"
-						required>
-				</div>
-				<div class="help-block with-errors"></div>
-			</div>
-			<div class="form-group">
-				<div id="contact-us-message" class="input-group-lg message">
-					<textarea id="contact-message" class="form-control" placeholder="Enter a message" data-error="Please enter a message" rows="4"
-						required></textarea>
-				</div>
-				<div class="help-block with-errors"></div>
-			</div>
-			<button id="contact-us-send-message" type="submit" onsubmit="return false;" class="btn btn-custom orange-button">
-    <span class="fa fa-paper-plane" aria-hidden="true"></span>
-    <span class="no-pointer-events contact-us-button-text">SEND MESSAGE</span>
-  </button>
-
-</form>
-</div>
-</div>
-</div>
+		</div>
+	</div>
 </div>
