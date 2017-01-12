@@ -3,7 +3,7 @@
 // Documentation can be found at http://support.ghost.org/config/
 
 var path = require('path'),
-    websiteUrl = "http://trackplandocs.azurewebsites.net",
+    websiteUrl = "https://trackplandocs.azurewebsites.net",
     websiteUrlSSL = "https://trackplandocs.azurewebsites.net",
     config;
 
