@@ -12,7 +12,7 @@
         </div>
 
         <ul class="page-links-parent list-group">
-          {{#get "tags"}}
+          {{#get "tags" limit="all"}}
             {{#foreach tags}}
                 <li class="page-links list-group-item"><a href="{{url}}">{{name}}</a></li>
               {{/foreach}}
