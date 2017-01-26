@@ -3,8 +3,8 @@
 // Documentation can be found at http://support.ghost.org/config/
 
 var path = require('path'),
-    websiteUrl = "https://trackplandocs.azurewebsites.net",
-    websiteUrlSSL = "https://trackplandocs.azurewebsites.net",
+    websiteUrl = "https://help.trackplanfm.com",
+    websiteUrlSSL = "https://help.trackplanfm.com",
     config;
 
 // if (!websiteUrl || websiteUrl === '' ||  websiteUrl.length === 0) {
